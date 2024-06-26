@@ -1,0 +1,115 @@
+.<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.96">
+
+    <link rel="stylesheet" href="contact.css" />
+    <title>Contact Us</title>
+
+  </head>
+  <body>
+    <button class="custom-button" onclick="goBack()">
+      <svg height="16" width="16" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1024 1024"><path d="M874.690416 495.52477c0 11.2973-9.168824 20.466124-20.466124 20.466124l-604.773963 0 188.083679 188.083679c7.992021 7.992021 7.992021 20.947078 0 28.939099-4.001127 3.990894-9.240455 5.996574-14.46955 5.996574-5.239328 0-10.478655-1.995447-14.479783-5.996574l-223.00912-223.00912c-3.837398-3.837398-5.996574-9.046027-5.996574-14.46955 0-5.433756 2.159176-10.632151 5.996574-14.46955l223.019353-223.029586c7.992021-7.992021 20.957311-7.992021 28.949332 0 7.992021 8.002254 7.992021 20.957311 0 28.949332l-188.073446 188.073446 604.753497 0C865.521592 475.058646 874.690416 484.217237 874.690416 495.52477z"></path></svg>
+      <span>Back</span>
+    </button>
+    
+    <div class="card mx-auto max-w-md" id="contact-card">
+      <div class="card-header">
+        <h2 class="card-title form-element">Contact Us</h2>
+        <p class="card-description form-element">
+          Fill out the form below and we'll get back to you as soon as possible.
+        </p>
+      </div>
+      <div class="card-content">
+        <form
+          class="form space-y-4"
+          action="https://api.web3forms.com/submit"
+          method="POST"
+        >
+        <input type="hidden" name="access_key" value="a4239cd0-383c-4dc2-9e01-17af0d44fd9d">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="space-y-2 form-element">
+              <label for="first-name">First name</label>
+              <input
+                id="first-name"
+                name="first-name"
+                placeholder="Enter your first name"
+                required
+              />
+            </div>
+            <div class="space-y-2 form-element">
+              <label for="last-name">Last name</label>
+              <input
+                id="last-name"
+                name="last-name"
+                placeholder="Enter your last name"
+                required
+              />
+            </div>
+            <div class="space-y-2 form-element">
+              <label for="phone">Phone number</label>
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                placeholder="Enter your phone number"
+                required
+              />
+            </div>
+          </div>
+          <div class="space-y-2 form-element">
+            <label for="email">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+          <div class="space-y-2 form-element">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Enter your message"
+              class="min-h-100"
+              required
+            ></textarea>
+          </div>
+          <div class="space-y-2 form-element">
+            <label>Do you want a callback from us?</label>
+            <div class="radio-group flex items-center gap-4">
+              <div class="flex items-center gap-2">
+                <input
+                  type="radio"
+                  id="callback-yes"
+                  name="callback"
+                  value="yes"
+                  required
+                />
+                <label for="callback-yes">Yes</label>
+              </div>
+              <div class="flex items-center gap-2">
+                <input
+                  type="radio"
+                  id="callback-no"
+                  name="callback"
+                  value="no"
+                  required
+                />
+                <label for="callback-no">No</label>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer form-element">
+            <button type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="contact.js"></script>
+    
+  </body>
+</html>
